@@ -1,0 +1,20 @@
+.errorPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    margin-top: 20px;
+}
+.errorHeading{
+    font-size: 2rem;
+    margin: 5px 0px;
+}
+.errorHeading2{
+    margin-bottom: 5px;
+    color: #f0f0f0;
+}
+.errorImage{
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}

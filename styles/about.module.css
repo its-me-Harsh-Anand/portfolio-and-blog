@@ -1,0 +1,21 @@
+.aboutMeDivs{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+
+.heading{
+    padding:10px 5px;
+    font-size: x-large;
+    /* border-bottom: 5px solid gray; */
+    background-color: rgba(255, 255, 255,.8);
+    border-radius: 5px;
+}
+.profileImage{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.heading:first-child{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
