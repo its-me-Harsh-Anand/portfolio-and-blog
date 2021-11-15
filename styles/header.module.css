@@ -2,6 +2,10 @@
     background: transparent;
     color: white;
     /* width: 100%; */
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 20;
     padding:5px 8px;
 }
 .headerDiv{

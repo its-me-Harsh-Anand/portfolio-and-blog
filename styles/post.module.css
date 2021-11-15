@@ -1,0 +1,73 @@
+.postDiv{
+    /* 'w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6'  */
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 6px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 2px rgb(144, 144, 219);
+}
+.postImage{
+    /* 'mb-4 rounded' */
+    margin-bottom: 4px;
+    border-radius: 3px;
+}
+.dateAndCategory{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.date{
+    font-weight: lighter;
+    color: rgba(128, 128, 128, 0.6);
+}
+.title{
+    margin-top: 2px;
+}
+.titleLink{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.titleLink:hover{
+    text-decoration: underline;
+}
+.excerpt{
+    /* 'mt-2 text-gray-600' */
+    margin-top: 2px;
+    color: gray;
+    font-weight: lighter;
+}
+.author{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+.authorLink{
+    /* 'text-gray-900 hover:text-blue-600' */
+    color: grey;
+    text-decoration: none;
+    font-weight: 900;
+}
+.authorLink:hover{
+    color: blue;
+    font-weight: 600;
+}
+.authorImageDiv{
+    display: flex;
+    align-items: center;
+}
+.authorImage{
+    /* 'mx-4 w-10 h-10 object-cover rounded-full hidden sm:block' */
+    margin: 0px 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+}
+.authorName{
+    /* 'text-gray-700 font-bold' */
+    color: grey;
+    font-weight: bold;
+}

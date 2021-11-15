@@ -1,6 +1,5 @@
 .layout{
-    max-width: 768px;
-    /* min-width: max-content; */
+    max-width: 1024px;
     background-color: transparent;
     margin: 7px auto;
 }

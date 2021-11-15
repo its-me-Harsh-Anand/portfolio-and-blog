@@ -1,0 +1,44 @@
+.heading{
+    /* font-size: 1.5rem; */
+    border-bottom: 4px solid #f0f0f0;
+    padding: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.gridDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    gap: 10px;
+}
+
+.indexLink{
+    display: block;
+    padding: 4px 0px;
+    margin: 10px 0px;
+    text-align: center;
+    border: 2px solid rgba(128, 128, 128, 0.5);
+    background-color: rgba(128, 128, 128, 0.5);
+    transition: all 500ms ease;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.indexLink:hover{
+    color: white;
+    background-color: rgba(128, 128, 128, 0.9);
+}
+.indexLink:focus{
+    outline: none;
+}
+@media (max-width: 768px) {
+    .gridDiv{
+        grid-template-columns: repeat(2, 1fr );
+    }
+}
+@media (max-width: 400px) {
+    .gridDiv{
+        grid-template-columns: repeat(1, 1fr );
+    }
+}

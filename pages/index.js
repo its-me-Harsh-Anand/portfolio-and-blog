@@ -1,12 +1,33 @@
 import fs from 'fs' //it is for server side not for client side
 import path from 'path'
+import Link from 'next/link'
 import Layout from "../components/Layout";
 import matter from "gray-matter"
-
+import styles from '../styles/home.module.css'
+import Post from '../components/Post';
+import { sortByDate } from '../utils'
 export default function Home({posts}) {
-  console.log(posts)
+
   return (
-    <Layout>Hello world</Layout>
+    <Layout>
+      <h1 className={styles.heading}>
+        Latest Posts
+      </h1>
+
+      <div className={styles.gridDiv}>
+        {
+          posts.map((post, index) =>{
+            return <Post key={index} post = {post}/>
+          })
+        }
+      </div>
+
+      <Link href='/blog'>
+        <a className={styles.indexLink}>
+          All posts
+        </a>
+      </Link>
+    </Layout>
   )
 }
 
@@ -14,23 +35,23 @@ export async function getStaticProps() {
   const files = fs.readdirSync(path.join('posts'))
 
   const posts = files.map(filename =>{
-  const slug = filename.replace('.md', '')
+    const slug = filename.replace('.md', '')
 
-  const markdownWithMeta = fs.readFileSync(
-    path.join('posts', filename), 
-    'utf-8'
-    )
-  
-  const {data: frontmatter} = matter(markdownWithMeta)
-  return {
-    slug,
-    frontmatter,
-  }
-})
+    const markdownWithMeta = fs.readFileSync(
+      path.join('posts', filename), 
+      'utf-8'
+      )
+    
+    const {data: frontmatter} = matter(markdownWithMeta)
+    return {
+      slug,
+      frontmatter,
+    }
+  })
 
   return {
     props: {
-      posts
+      posts : posts.sort(sortByDate).slice(0,6)
     },
   }
 }
