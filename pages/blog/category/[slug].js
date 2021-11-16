@@ -5,10 +5,15 @@ import matter from "gray-matter"
 import Post from '@/components/Post';
 import { sortByDate } from '@/utils/index'
 import styles from '@/styles/home.module.css'
-export default function Blogs({posts, categoryName}){
+import CategoryList from '@/components/CategoryList';
+export default function Blogs({posts, categoryName, uniqueCategories}){
 
   return (
     <Layout>
+
+      <div className={styles.categoryList}>
+        <CategoryList categories={uniqueCategories} />
+      </div>
         <h1 className={styles.heading}>
           Blogs in {categoryName}
         </h1>
@@ -43,7 +48,7 @@ export async function getStaticPaths() {
     const paths = posts.map(front=>(
         {
             params : {
-                slug : front.category.toLowerCase()
+                slug : front.category.toLowerCase(),
             }
         }
         ))
@@ -76,10 +81,14 @@ export async function getStaticProps({params : {slug}}) {
   })
 
 const requiredPosts = posts.filter(post=> post.frontmatter.category.toLowerCase() === slug)
+//get categories to show in category table
+  const categories = posts.map(post=> post.frontmatter.category)
+    const uniqueCategories = [...new Set(categories)]
   return {
     props: {
       posts : requiredPosts.sort(sortByDate),
-      categoryName : slug
+      categoryName : slug,
+      uniqueCategories
     },
   }
 }

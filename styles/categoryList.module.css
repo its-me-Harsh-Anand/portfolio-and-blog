@@ -1,0 +1,15 @@
+.categorySpan{
+        background-color : white;
+        font-size : 12px;
+        font-family : sans-serif;
+        font-weight :600;
+        padding : 1px 6px;
+        margin : 6px 6px;
+        border-radius : 30px;
+        cursor : pointer;
+        letter-spacing: 1.2;
+}
+.categorySpan:hover{
+    color: white;
+    background-color: black;
+}

@@ -2,11 +2,13 @@
     background: transparent;
     color: white;
     /* width: 100%; */
+    /* border-bottom: 3px solid palegreen; */
     position: sticky;
     top: 0;
     left: 0;
     z-index: 20;
     padding:5px 8px;
+    background: linear-gradient(to right, rgb(153, 0, 255), rgb(255, 136, 0));
 }
 .headerDiv{
     display: flex;
@@ -21,7 +23,8 @@
     position: relative;
 }
 .links{
-    padding: 0px 10px;
+    padding: 3px 6px;
+    margin: 0px 10px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-family: sans-serif;
@@ -47,13 +50,9 @@
     left: 50%;
     height: 2px;
     width: 0%;
-    background: red;
+    background: palegreen;
     transition: 300ms;
   }
-.links:hover{
-    font-size: 1.2em;
-    padding-bottom: 3px;
-}
 .links:hover::after{
     left: 0;
     width: 100%;

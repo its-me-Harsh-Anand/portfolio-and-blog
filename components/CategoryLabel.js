@@ -1,4 +1,5 @@
 import Link from "next/link"
+import styles from '@/styles/categoryLabel.module.css'
 
 function CategoryLabel({children}) {
     const categoryColor = {
@@ -9,23 +10,21 @@ function CategoryLabel({children}) {
         Ruby : 'red'
     }
     return (
-        <div style={{
+        <div  className={styles.categoryDiv}
+        style={{
                     "color": "grey", 
                     "backgroundColor": categoryColor[children] || "black",
                     "padding" : "3px 5px",
                     "borderRadius": "3px",
                     }}
+           
         >
         <Link 
             href={`/blog/category/${children.toLowerCase()}`}
         >
-            <a style={
-                {
-                    "color" : "white",
-                    "fontWeight" : "bold",
-                    "textDecoration" : "none"
-                }
-            }>
+            <a 
+                className={styles.categoryLink}
+            >
                 {children}
             </a> 
         </Link>

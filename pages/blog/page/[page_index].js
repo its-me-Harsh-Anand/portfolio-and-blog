@@ -7,10 +7,15 @@ import Post from '@/components/Post';
 import Pagination from '@/components/Pagination';
 import { sortByDate } from '@/utils/index'
 import { POST_PER_PAGE } from '@/config/index';
-export default function Blogs({posts, noOfPages, currentPage}) {
-
+import CategoryList from '@/components/CategoryList';
+export default function Blogs({posts, noOfPages, currentPage, uniqueCategories}) {
+console.log("categories", uniqueCategories)
   return (
-    <Layout>
+    <Layout title={`Blog page ${currentPage}`}>
+      <div className={styles.categoryList}>
+        <CategoryList categories={uniqueCategories} />
+      </div>
+
       <h1 className={styles.heading}>
         My Blogs
       </h1>
@@ -63,16 +68,21 @@ export async function getStaticProps({params}) {
       path.join('posts', filename), 
       'utf-8'
       )
+      
+      const {data: frontmatter} = matter(markdownWithMeta)
+      return {
+        slug,
+        frontmatter,
+      }
+    })
     
-    const {data: frontmatter} = matter(markdownWithMeta)
-    return {
-      slug,
-      frontmatter,
-    }
-  })
+    //get category for category sidebar
 
-  const noOfPages = Math.ceil(files.length / POST_PER_PAGE)
-  const pageIndex = page-1
+    const categories = posts.map(post=> post.frontmatter.category)
+    const uniqueCategories = [...new Set(categories)]
+    
+    const noOfPages = Math.ceil(files.length / POST_PER_PAGE)
+    const pageIndex = page-1
 
   const orderedPosts = posts.sort(sortByDate).slice(pageIndex*POST_PER_PAGE , (pageIndex+1)*POST_PER_PAGE)
   return {
@@ -80,6 +90,7 @@ export async function getStaticProps({params}) {
       posts : orderedPosts,
       noOfPages,
       currentPage : page,
+      uniqueCategories,
     },
   }
 }

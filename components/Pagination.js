@@ -22,7 +22,7 @@ export default function Pagination({ currentPage, noOfPages }) {
 
         {Array.from({ length: noOfPages }, (_, i) => (
           <Link href={`/blog/page/${i + 1}`}>
-            <li className={styles.listItem}>
+            <li className={styles.listItem} key={i}>
               {i + 1}
             </li>
           </Link>
