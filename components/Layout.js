@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/layout.module.css'
+import styles from '@/styles/layout.module.css'
 import Header from './Header'
 
 function Layout({title, keywords, description, children}) {

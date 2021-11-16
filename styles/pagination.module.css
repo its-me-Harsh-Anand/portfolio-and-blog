@@ -1,0 +1,29 @@
+.list{
+    /* 'flex pl-0 list-none my-2' */
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    margin: 10px 0px;
+    background-color: rgba(255, 255, 255, 0.281);
+}
+.listItem{
+    /* 'relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:bg-gray-200 cursor-pointer' */
+    position: relative;
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 0px 2px;
+    background-color: transparent;
+    border-radius: 3px;
+    background-color: red;
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: sans-serif;
+    line-height: 1.25;
+}
+
+.listItem:hover{
+    background-color: blue;
+    color: red;
+}

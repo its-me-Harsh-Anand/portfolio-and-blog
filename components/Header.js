@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from '../styles/header.module.css'
+import styles from '@/styles/header.module.css'
+
 
 function Header() {
-
+    
     return (
         <header className={styles.header}>
              <div className={styles.headerDiv}>

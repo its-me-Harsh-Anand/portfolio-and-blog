@@ -1,18 +1,18 @@
 import fs from 'fs' //it is for server side not for client side
 import path from 'path'
-import Link from 'next/link'
 import Layout from "@/components/Layout";
 import matter from "gray-matter"
 import styles from '@/styles/home.module.css'
 import Post from '@/components/Post';
+import Pagination from '@/components/Pagination';
 import { sortByDate } from '@/utils/index'
+import { POST_PER_PAGE } from '@/config/index';
+export default function Blogs({posts, noOfPages, currentPage}) {
 
-
-export default function Home({posts}) {
   return (
     <Layout>
       <h1 className={styles.heading}>
-        Latest Posts
+        My Blogs
       </h1>
 
       <div className={styles.gridDiv}>
@@ -23,16 +23,37 @@ export default function Home({posts}) {
         }
       </div>
 
-      <Link href='/blog'>
-        <a className={styles.indexLink}>
-          All posts
-        </a>
-      </Link>
+      <Pagination currentPage={currentPage} noOfPages={noOfPages}/>
     </Layout>
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticPaths() {
+    const files = fs.readdirSync(path.join('posts'))
+    const noOfPages = Math.ceil(files.length / POST_PER_PAGE)
+
+    const paths = []
+    for(let i=1; i<=noOfPages ; i++ ){
+        paths.push({
+            params : {
+                page_index : i.toString()
+            }
+        })
+    }
+
+    return {
+        paths,
+        fallback: false
+    }      
+        
+
+}
+
+export async function getStaticProps({params}) {
+
+    const page = parseInt((params && params.page_index) || 1)
+
+
   const files = fs.readdirSync(path.join('posts'))
 
   const posts = files.map(filename =>{
@@ -50,9 +71,15 @@ export async function getStaticProps() {
     }
   })
 
+  const noOfPages = Math.ceil(files.length / POST_PER_PAGE)
+  const pageIndex = page-1
+
+  const orderedPosts = posts.sort(sortByDate).slice(pageIndex*POST_PER_PAGE , (pageIndex+1)*POST_PER_PAGE)
   return {
     props: {
-      posts : posts.sort(sortByDate).slice(0,6)
+      posts : orderedPosts,
+      noOfPages,
+      currentPage : page,
     },
   }
 }

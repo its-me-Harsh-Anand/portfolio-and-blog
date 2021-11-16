@@ -1,11 +1,11 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Layout from '../../components/Layout'
+import Layout from '@/components/Layout'
 import {marked } from 'marked'
 import Link from 'next/link'
-import CategoryLabel from '../../components/CategoryLabel'
-import styles from '../../styles/blog.module.css'
+import CategoryLabel from '@/components/CategoryLabel'
+import styles from '@/styles/blog.module.css'
 
 function BlogPage({frontmatter : {
     title,
