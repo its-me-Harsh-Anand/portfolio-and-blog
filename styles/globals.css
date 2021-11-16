@@ -6,3 +6,38 @@
 body{
     background: linear-gradient(to right, hsl(200,100%,50%), hsl(175,100%,50%));
 }
+
+p {
+    margin: 15px 0;
+    line-height: 1.8;
+  }
+  
+  .blog-text ul,
+  ol {
+    font-size: 110%;
+    line-height: 2.3;
+    font-weight: bold;
+    margin: 10px 20px;
+  }
+  
+  .blog-text pre {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 20px 0;
+    line-height: 2.3;
+    overflow-x: auto;
+  }
+
+  .blog-text h1 {
+    font-size: 35px;
+  }
+  .blog-text a{
+      text-decoration: none;
+      color: blue;
+  }
+  .blog-text h2,
+  .blog-text h3,
+  .blog-text h4 {
+    font-size: 27px;
+  }
+  
