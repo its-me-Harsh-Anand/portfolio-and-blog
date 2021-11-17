@@ -9,7 +9,7 @@ import { sortByDate } from '@/utils/index'
 import { POST_PER_PAGE } from '@/config/index';
 import CategoryList from '@/components/CategoryList';
 export default function Blogs({posts, noOfPages, currentPage, uniqueCategories}) {
-console.log("categories", uniqueCategories)
+
   return (
     <Layout title={`Blog page ${currentPage}`}>
       <div className={styles.categoryList}>

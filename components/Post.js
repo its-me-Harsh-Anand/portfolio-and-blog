@@ -4,6 +4,7 @@ import styles from '@/styles/post.module.css'
 import CategoryLabel from './CategoryLabel'
 
 export default function Post({ post }) {
+  
   return (
     <div className={styles.postDiv}>
         <Image

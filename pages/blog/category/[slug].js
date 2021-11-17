@@ -9,7 +9,7 @@ import CategoryList from '@/components/CategoryList';
 export default function Blogs({posts, categoryName, uniqueCategories}){
 
   return (
-    <Layout>
+    <Layout title={`Blogs | ${categoryName.toUpperCase().charAt(0) + categoryName.slice(1)}`}>
 
       <div className={styles.categoryList}>
         <CategoryList categories={uniqueCategories} />
@@ -31,28 +31,29 @@ export default function Blogs({posts, categoryName, uniqueCategories}){
 
 export async function getStaticPaths() {
     const files = fs.readdirSync(path.join('posts'))
-
+    
     const posts = files.map(file=>{
 
-    const markdownWithMeta = fs.readFileSync(
-      path.join('posts', file), 
-      'utf-8'
-      )
-    
-    const {data: frontmatter} = matter(markdownWithMeta)
-    return frontmatter
-})
-
+      
+        const markdownWithMeta = fs.readFileSync(
+          path.join('posts', file), 
+          'utf-8'
+          )
+        const {data: frontmatter} = matter(markdownWithMeta)
+        return {
+          frontmatter,
+        }
+    })
 
 
     const paths = posts.map(front=>(
         {
             params : {
-                slug : front.category.toLowerCase(),
+                slug : front.frontmatter.category.toLowerCase(),
             }
         }
         ))
-    
+
     return {
         paths,
         fallback: false
@@ -67,7 +68,7 @@ export async function getStaticProps({params : {slug}}) {
 
   const posts = files.map(filename =>{
     
-
+    const slug = filename.replace('.md', '')
     const markdownWithMeta = fs.readFileSync(
       path.join('posts', filename), 
       'utf-8'
@@ -77,6 +78,7 @@ export async function getStaticProps({params : {slug}}) {
 
     return {
       frontmatter,
+      slug
     }
   })
 
@@ -84,11 +86,13 @@ const requiredPosts = posts.filter(post=> post.frontmatter.category.toLowerCase(
 //get categories to show in category table
   const categories = posts.map(post=> post.frontmatter.category)
     const uniqueCategories = [...new Set(categories)]
+
+
   return {
     props: {
       posts : requiredPosts.sort(sortByDate),
       categoryName : slug,
-      uniqueCategories
+      uniqueCategories,
     },
   }
 }
