@@ -5,6 +5,21 @@ import styles from '@/styles/searchbar.module.css'
 export default function SearchBar() {
     const [searchTerm, setSearchTerm] = useState('')
     const [searchResults, setSearchResults] = useState([])
+
+    useEffect(()=>{
+        const getResults = async ()=>{
+            if(searchTerm===''){
+                setSearchResults([])
+            } else {
+                const res = await fetch(`/api/search?q=${searchTerm}`)
+                const {results} = await res.json()
+                setSearchResults(results)
+            }
+        }
+
+        getResults()
+        console.log()
+    }, [searchTerm])
     return (
         <div className={styles.searchParentDiv}>
             <div className={styles.searchBox}>
