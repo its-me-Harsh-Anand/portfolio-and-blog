@@ -7,7 +7,8 @@ export default function handler(req, res) {
 
   let posts;
   if(process.env.NODE_ENV === 'production'){
-
+    // Fetch post data from cached/data.js as in production, api will work as serverless function in fetching our posts
+     posts = require("../../cache/data").posts
   } else{
     const files = fs.readdirSync(path.join("posts"))
     

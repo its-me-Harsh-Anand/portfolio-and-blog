@@ -5,7 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cache-post": "node scripts/cache",
+    "prepare": "husky install"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "12.0.3"
+    "eslint-config-next": "12.0.3",
+    "husky": "^7.0.4"
   }
 }
