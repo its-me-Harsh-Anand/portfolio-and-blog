@@ -62,3 +62,11 @@ fs module is a server side node module but we are importing here in client side,
 but fs module says, when we use it in function which completely runs on server side, then we can use it
 gray-matter module is use to parse markdown frontmatter file
 */
+
+/*
+<Image> is rendered only through vercel 
+next export -> while building through npm build, will export all static props and paths and make our site static
+and hence api will work here statically and not on server-side
+
+we cannot fetch our files inside post in server side, so to do this we have to cached all the post to get the post in search bar
+*/

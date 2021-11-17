@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/layout.module.css'
 import Header from './Header'
+import SearchBar from './SearchBar'
 
 function Layout({title, keywords, description, children}) {
     return (
@@ -13,6 +14,7 @@ function Layout({title, keywords, description, children}) {
             </Head>
 
             <Header />
+            <SearchBar />
             <main className={styles.layout}>
                 {children}
             </main>
