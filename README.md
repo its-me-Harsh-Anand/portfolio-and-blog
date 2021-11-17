@@ -42,6 +42,16 @@ my blog file should must follow below criteria
 
 ## A Blog Website created by me
 
+If you are getting error in running website locally, create a `.bablerc` file and write the below code
+
+```js
+{
+    "presets": ["next/babel"]
+}
+  
+```
+
+and then restart the server
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
