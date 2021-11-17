@@ -6,9 +6,9 @@ export default function CategoryList({categories}) {
             {
                 categories.map((category, index)=>{
                     return (
-                        <Link href = {`/blog/category/${category.toLowerCase()}`}>
+                        <Link href = {`/blog/category/${category.toLowerCase()}`} key={index}>
                             <span className={styles.categorySpan}
-                            key={index}>{category}</span>
+                            >{category}</span>
                         </Link>
                         
                     )

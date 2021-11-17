@@ -9,7 +9,7 @@ function About() {
         >
             <div className={styles.aboutMeDivs}>
             <h3 className={styles.heading}>About me</h3>
-            <Image className={styles.profileImage} src='/images/profile.jpeg' height={600} width={400}/>
+            <Image className={styles.profileImage} src='/images/profile.jpeg' akt="" height={600} width={400}/>
             </div>
 
 
