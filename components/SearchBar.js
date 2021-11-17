@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import {FaSearch} from 'react-icons/fa'
 import styles from '@/styles/searchbar.module.css'
+import SearchResults from "./SearchResults"
 
 export default function SearchBar() {
     const [searchTerm, setSearchTerm] = useState('')
@@ -39,6 +40,8 @@ export default function SearchBar() {
                 </form>
             </div>
         </div>
+
+        <SearchResults results={searchResults} />
       </div>
     )
 }

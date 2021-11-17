@@ -7,7 +7,7 @@ body{
     background: linear-gradient(to right, hsl(200,100%,50%), hsl(175,100%,50%));
 }
 
-p {
+.blog-post p {
     margin: 15px 0;
     line-height: 1.8;
   }
