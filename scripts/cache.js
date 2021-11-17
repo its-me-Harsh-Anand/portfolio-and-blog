@@ -14,7 +14,6 @@ function getPostData() {
             slug
         }
     })
-    console.log(posts)
     return `export const posts = ${JSON.stringify(posts)}`
 }
 
