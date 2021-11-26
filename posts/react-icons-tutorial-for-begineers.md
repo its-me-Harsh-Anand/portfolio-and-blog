@@ -14,7 +14,6 @@ author_image: 'https://randomuser.me/api/portraits/men/12.jpg'
 
 # React Icons - A Begineer's Guide
 
-![React icons](..//images/assets/icons.jpg)
 Image from [Unsplash by Harpal Singh](https://images.unsplash.com/photo-1506729623306-b5a934d88b53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aWNvbnN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60)
 
 ## Introduction
