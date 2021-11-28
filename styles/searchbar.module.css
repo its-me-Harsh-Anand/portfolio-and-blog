@@ -25,6 +25,7 @@
     padding-right: 10px;
     border-radius: 30px;
     border: none;
+    width: 200px;
 }
 .inputBox:focus{
     outline: none;

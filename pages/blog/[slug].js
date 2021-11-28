@@ -45,7 +45,7 @@ function BlogPage({frontmatter : {
                 </div>
 
                 <div className="blog-text">
-                    <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+                    <div className="blog-main" dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
                 </div>
             </div>
         </Layout>

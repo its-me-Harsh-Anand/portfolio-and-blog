@@ -5,7 +5,7 @@ excerpt: 'React icons is a library that contain many icons that we want to integ
 cover_image: '/images/posts/react-icons-cover.jpg'
 category: 'React'
 author: 'Harsh Anand'
-author_image: 'https://randomuser.me/api/portraits/men/12.jpg'
+author_image: '/images/profile.jpeg'
 ---
 
 
@@ -126,7 +126,7 @@ You have just a few steps left to implement react icons in your project. Don't w
 
 ### Output
 
-![Output](/images/assets/output-icons.PNG)
+![Output](/images/assets/react-icons/output-icons.PNG)
 
 ## Styling React Icons
 
@@ -163,7 +163,7 @@ You can choose to style more than one of the icons at a time or style it individ
 
         `Output`
         
-        ![Output of above](/images/assets/coloured-two.PNG)
+        ![Output of above](/images/assets/react-icons/coloured-two.PNG)
 
     - ### Styling single icon
 
@@ -180,7 +180,7 @@ You can choose to style more than one of the icons at a time or style it individ
 
         `Output`
 
-        ![output of above](/images/assets/coloured-single.PNG)
+        ![output of above](/images/assets/react-icons/coloured-single.PNG)
 
 
 ### 2. Using styled component
@@ -232,7 +232,7 @@ const Alarm = styled(BsFillAlarmFill)`
 
 - Output
 
-![Final Ourput](/images/assets/final-output.PNG)
+![Final Ourput](/images/assets/react-icons/final-output.PNG)
 
 ### Your final code inside App.js should look like this
 
