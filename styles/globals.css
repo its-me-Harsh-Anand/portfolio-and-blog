@@ -18,7 +18,9 @@ body{
   
 } 
 .blog-main img {
-  width: -moz-available;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
   .blog-text ul,
   ol {
