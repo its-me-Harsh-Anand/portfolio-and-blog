@@ -61,4 +61,7 @@
     .navigation{
         flex-direction: column;
     }
+    .header{
+        position: inherit;
+    }
 }

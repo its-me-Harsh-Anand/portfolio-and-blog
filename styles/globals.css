@@ -17,6 +17,9 @@ body{
   margin: 15px 10px;
   
 } 
+.blog-main img {
+  width: -moz-available;
+}
   .blog-text ul,
   ol {
     font-size: 110%;
