@@ -7,7 +7,8 @@ function CategoryLabel({children}) {
         Python: 'blue',
         PHP: 'pink',
         CSS: 'orange',
-        Ruby : 'red'
+        Ruby : 'red',
+        React : 'purple'
     }
     return (
         <div  className={styles.categoryDiv}
