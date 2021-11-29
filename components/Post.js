@@ -49,7 +49,7 @@ export default function Post({ post, searchMenu }) {
           <div className={styles.authorImageDiv}>
             <img
               src={post.frontmatter.author_image}
-              alt="author image"
+              alt={post.frontmatter.author.split(" ")[0]}
               className={styles.authorImage}
             />
             <h3 className={styles.authorName}>{post.frontmatter.author}</h3>
