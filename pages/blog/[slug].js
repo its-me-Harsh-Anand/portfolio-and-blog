@@ -14,9 +14,10 @@ function BlogPage({frontmatter : {
     cover_image,
     date,
     category,
+    excerpt,
 }, content, slug}) {
     return (
-        <Layout title={title}>
+        <Layout title={title} description={excerpt}>
             <Link href='/blog'>
                 <a className={styles.goBack}>
                     Go Back
