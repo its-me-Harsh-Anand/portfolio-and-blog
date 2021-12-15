@@ -2,7 +2,7 @@
 title: 'ECMAScript - A brief history'
 date: 'December 15, 2021'
 excerpt: 'ECMAScript is a general-purpose programming language that is implemented in Javascript and some other languages.'
-cover_image: '/images/posts/ecmascript.PNG'
+cover_image: '/images/posts/ecmascript.png'
 category: 'JavaScript'
 author: 'Harsh Anand'
 author_image: '/images/profile.jpeg'
