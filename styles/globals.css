@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap');
 *{
     margin:0;
     padding: 0;
@@ -11,39 +11,51 @@ body{
 
 .blog-post p {
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 300;  
 }
 .blog-text > .blog-main p{
   margin: 15px 10px;
-  
+  font-weight: 300;
 } 
 .blog-main img {
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 100%;
 }
   .blog-text ul,
-  ol {
-    font-size: 110%;
-    line-height: 2;
-    font-weight: normal;
-    margin: 10px 2%;
+  .blog-text ol {
+    font-weight: 300;
+    margin: 7px 2rem;
     font-family: Poppins;
   }
-  
+  .blog-text ul li::marker,
+  .blog-text ol li::marker{
+    color: green;
+  }
+  .blog-text ul li ul li::marker{
+    color: red;
+  }
+  .blog-text ul li ul li{
+    font-weight: 300;
+  }
   .blog-text pre {
     background: #f4f4f4;
     padding: 10px;
     margin: 10px 0;
     overflow-x: auto;
-    font-weight: normal;
+    font-weight: 300;
+  }
+  .blog-text > .blog-main code{
+    background-color: #cfcfcf;
+    border-radius: 5px;
+    padding: 2px 4px;
   }
   .blog-text > .blog-main pre code{
-    font-weight: normal;
+    font-weight: 300;
   }
   .blog-text h1 {
     font-family: Poppins;
-    font-size: 35px;
+    font-size: 28px;
   }
   .blog-text a{
       text-decoration: none;
@@ -52,6 +64,6 @@ body{
   .blog-text h2,
   .blog-text h3,
   .blog-text h4 {
-    font-size: 27px;
+    font-size: 21px;
   }
   
