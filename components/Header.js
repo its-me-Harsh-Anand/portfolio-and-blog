@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/header.module.css'
+import SearchBar from './SearchBar'
 
 
 function Header() {
@@ -32,6 +33,7 @@ function Header() {
                          <a className={styles.links}>About</a>
                      </Link>
 
+                     <SearchBar />
                  </nav>
              </div>
         </header>

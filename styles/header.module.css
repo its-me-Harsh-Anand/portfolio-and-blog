@@ -8,8 +8,9 @@
     left: 0;
     z-index: 20;
     padding:5px 8px;
-    background: linear-gradient(to right, rgb(153, 0, 255), rgb(255, 136, 0));
-    box-shadow : 0px 5px 11px 0px rgba(50,50,50,0.08);
+    /* background: linear-gradient(to right, rgb(153, 0, 255), rgb(255, 136, 0)); */
+    background: #0a3069;
+    box-shadow : 0px 5px 11px 0px #203a63;;
 }
 .headerDiv{
     display: flex;
@@ -22,6 +23,7 @@
     display: flex;
     padding-right: 10px;
     position: relative;
+    flex-wrap: wrap;
 }
 .links{
     padding: 3px 6px;

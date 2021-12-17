@@ -6,7 +6,9 @@
     font-family: Poppins !important;
 }
 body{
-    background: linear-gradient(to right, hsl(200,100%,50%), hsl(175,100%,50%));
+    /* background: linear-gradient(to right, hsl(200,100%,50%), hsl(175,100%,50%)); */
+    /* background-color: #eaeaea; */
+    background-color: #f4f7fd;
 }
 
 .blog-post p {

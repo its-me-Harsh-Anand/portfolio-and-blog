@@ -14,7 +14,7 @@ function Layout({title, keywords, description, children}) {
             </Head>
 
             <Header />
-            <SearchBar />
+            
 
             <main className={styles.layout}>
                 {children}

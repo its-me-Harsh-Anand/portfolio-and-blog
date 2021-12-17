@@ -24,7 +24,7 @@
     margin: 10px 0px;
     text-align: center;
     border: 2px solid rgba(128, 128, 128, 0.5);
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: #117a8b;
     transition: all 500ms ease;
     text-decoration: none;
     color: black;
@@ -33,7 +33,7 @@
 }
 .indexLink:hover{
     color: white;
-    background-color: rgba(128, 128, 128, 0.9);
+    background-color: #138496;
 }
 .indexLink:focus{
     outline: none;

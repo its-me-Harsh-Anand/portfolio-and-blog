@@ -18,11 +18,7 @@ function BlogPage({frontmatter : {
 }, content, slug}) {
     return (
         <Layout title={title} description={excerpt}>
-            <Link href='/blog'>
-                <a className={styles.goBack}>
-                    Go Back
-                </a>
-            </Link>
+            
 
             <div className={styles.mainDiv}>
 
@@ -48,6 +44,21 @@ function BlogPage({frontmatter : {
                 <div className="blog-text">
                     <div className="blog-main" dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
                 </div>
+            </div>
+
+            <div className={styles.linksDiv}>
+                <Link href="/blog">
+                    <a className={styles.goBack}>
+                        Go back
+                    </a>
+                </Link>
+
+                <Link href={`/blog/category/${category.toLowerCase()}`}>
+                    <a className={styles.goBack}>
+                        Read more blogs on { category }
+                    </a>
+                </Link>
+                
             </div>
         </Layout>
     )

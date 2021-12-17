@@ -11,7 +11,7 @@ author_image: '/images/profile.jpeg'
 
 
 ## ECMAScript
-`Ram`
+
 - JavaScript was invented by Bredan Eich in 1995, with a trademark of **Oracle** (which led to Microsoft calling its JavaScript dialect "JScript").
 - Thus, when it came to standardization, a different name had to be used. **ECMAScript** was chosen, because the corresponding standard is hosted by Ecma International.
 - The term **ECMAScript** is also frequently used to denote language versions (such as ECMAScript 5).

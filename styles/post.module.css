@@ -4,7 +4,10 @@
     background-color: rgba(255, 255, 255, 0.8);
     margin-top: 6px;
     border-radius: 2px;
-    box-shadow: 2px 2px 2px 2px rgb(144, 144, 219);
+    box-shadow: 2px 4px 7px 2px rgb(81, 101, 135);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .postImage{
     /* 'mb-4 rounded' */
@@ -25,8 +28,7 @@
 }
 .titleLink{
     font-size: 16px;
-    font-family: sans-serif;
-    color: blue;
+    color: #138496;
     font-weight: bold;
     text-decoration: none;
 }
@@ -36,14 +38,16 @@
 .excerpt{
     /* 'mt-2 text-gray-600' */
     margin-top: 2px;
-    color: gray;
     font-size: 0.9rem;
+    font-weight: 300;
 }
 .author{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 6px;
+    border: 3px solid #138496;
+    border-radius: 25%;
 }
 .authorLink{
     /* 'text-gray-900 hover:text-blue-600' */

@@ -4,7 +4,7 @@
 .categoryLink{
     color : white;
     font-weight : bold;
-    text-decoration : none
+    text-decoration : none;
 }
 .categoryLink:hover{
     text-decoration: teal;

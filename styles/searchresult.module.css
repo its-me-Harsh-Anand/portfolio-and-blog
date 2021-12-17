@@ -21,7 +21,7 @@
 }
 @media (max-width : 768px) {
     .searchResultMainDiv{
-        right: 10px;
+        right: -72px;
         top: 40px;
         min-width: 300px;
     }
