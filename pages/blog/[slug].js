@@ -6,6 +6,10 @@ import {marked } from 'marked'
 import Link from 'next/link'
 import CategoryLabel from '@/components/CategoryLabel'
 import styles from '@/styles/blog.module.css'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { useRouter } from 'next/dist/client/router'
+import { FaThumbsUp } from 'react-icons/fa'
 
 function BlogPage({frontmatter : {
     title,
@@ -16,6 +20,45 @@ function BlogPage({frontmatter : {
     category,
     excerpt,
 }, content, slug}) {
+
+    const router = useRouter()
+    
+    const [likes, setLikes] = useState(0)
+    const [postid, setPostid] = useState('')
+
+    useEffect(()=>{
+        axios.get('https://learnwithharsh.herokuapp.com/posts')
+        .then(res=>{
+            const post = res.data.find(post=> post.postname === router.query.slug)
+            console.log(post)
+            setPostid(post._id)
+            return post
+        })
+        .then((post)=>{
+            setLikes(post.likes)
+        })
+    }, [])
+
+        console.log(postid)
+    
+    function handleLikes(e){
+        e.preventDefault()
+
+        setLikes((likes)=> likes + 1)
+        const updatedlike = {
+            likes : likes+1
+        }
+
+
+        axios.post(`https://learnwithharsh.herokuapp.com/posts/update/${postid}`, updatedlike)
+        .then(res=> console.log(res.data))
+    }
+
+
+
+
+
+
     return (
         <Layout title={title} description={excerpt}>
             
@@ -24,6 +67,7 @@ function BlogPage({frontmatter : {
 
                 <div className={styles.titleAndCategory}>
                     <h1 className={styles.title}>{title}</h1>
+                    <span><FaThumbsUp onClick={(e)=> handleLikes(e)}/>  {likes}</span>
                     <CategoryLabel>{category}</CategoryLabel>
                 </div>
 
