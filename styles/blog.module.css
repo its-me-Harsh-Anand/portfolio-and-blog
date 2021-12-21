@@ -14,12 +14,12 @@
     padding: 2px;
     justify-content: space-around;
     align-items: center;
+    margin-right: 9px;
 }
 .likesIcon{
     transform: scale(2);
     color: blue;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 .likesCount{
     font-size: 1.2rem;
@@ -42,7 +42,7 @@
 }
 .title{
     /* 'text-5xl mb-7' */
-    font-size: x-large;
+    font-size: clamp(1rem, 7vmin, 2rem);
     margin-bottom: 7px;
 }
 .coverImage{
