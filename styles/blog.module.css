@@ -5,6 +5,25 @@
     border-radius: 5px;
     margin-top: 10px;
 }
+.likesDiv{
+    display: flex;
+    width: 97px;
+    height: 43px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    padding: 2px;
+    justify-content: space-around;
+    align-items: center;
+}
+.likesIcon{
+    transform: scale(2);
+    color: blue;
+    cursor: pointer;
+    
+}
+.likesCount{
+    font-size: 1.2rem;
+}
 .goBack{
     font-weight: bold;
     text-decoration: none;

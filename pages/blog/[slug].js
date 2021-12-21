@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/dist/client/router'
 import { FaThumbsUp } from 'react-icons/fa'
+import { IconContext } from "react-icons";
 
 function BlogPage({frontmatter : {
     title,
@@ -30,12 +31,15 @@ function BlogPage({frontmatter : {
         axios.get('https://learnwithharsh.herokuapp.com/posts')
         .then(res=>{
             const post = res.data.find(post=> post.postname === router.query.slug)
-            console.log(post)
-            setPostid(post._id)
+            
             return post
         })
         .then((post)=>{
             setLikes(post.likes)
+            return post
+        })
+        .then((post)=>{
+            setPostid(post._id)
         })
     }, [])
 
@@ -67,7 +71,14 @@ function BlogPage({frontmatter : {
 
                 <div className={styles.titleAndCategory}>
                     <h1 className={styles.title}>{title}</h1>
-                    <span><FaThumbsUp onClick={(e)=> handleLikes(e)}/>  {likes}</span>
+                    <div className={styles.likesDiv}>
+                        <div>
+                            <IconContext.Provider value={{className : `${styles.likesIcon}`}}>
+                                <FaThumbsUp onClick={(e)=> handleLikes(e)}/>
+                            </IconContext.Provider>
+                        </div>
+                        <div className={styles.likesCount}>{likes}</div>
+                    </div>
                     <CategoryLabel>{category}</CategoryLabel>
                 </div>
 

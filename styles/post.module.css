@@ -18,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 15px;
 }
 .date{
     font-weight: 300;
@@ -36,10 +37,9 @@
     text-decoration: underline;
 }
 .excerpt{
-    /* 'mt-2 text-gray-600' */
-    margin-top: 2px;
     font-size: 0.9rem;
     font-weight: 300;
+    margin: 14px 0px;
 }
 .author{
     display: flex;
