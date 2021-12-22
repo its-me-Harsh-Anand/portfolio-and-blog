@@ -71,3 +71,10 @@ body{
     font-size: 21px;
   }
   
+  .blog-main blockquote{
+    border-left: 3px solid green;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: Poppins;
+  border-radius: 3px;
+  }

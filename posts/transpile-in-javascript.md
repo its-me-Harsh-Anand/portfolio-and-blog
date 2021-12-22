@@ -13,7 +13,7 @@ author_image: '/images/profile.jpeg'
 # Transpile and Transpilers
 
 ## What is Transpiling
-As we all know, [ECMAScript](../ECMAScript/README.md) brings updates every year since 2015 with some major as well as minor changes. Likewise, new Javascript versions also bring syntaxial updates as well which is not possible to be [polyfilled](../Polyfills/README.md) as it would simply not get executed and will throw errors in old Javascript engines, this is where a transpiler comes into play.
+As we all know, [ECMAScript](https://learnwithharsh.me/blog/all-about-ecmascript) brings updates every year since 2015 with some major as well as minor changes. Likewise, new Javascript versions also bring syntaxial updates as well which is not possible to be [polyfilled](https://learnwithharsh.me/blog/introduction-to-polyfill) as it would simply not get executed and will throw errors in old Javascript engines, this is where a transpiler comes into play.
 
 <br>
 
@@ -80,10 +80,10 @@ Transpiling means to convert newer syntax code into older equivalent code which 
 ## Resources
 You can try above code [here](https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Creact%2Cstage-2&prettier=false&targets=&version=7.15.8&externalPlugins=&assumptions=%7B%7D)
 
-Know more about [babel here](../Babel/README.md)
+Know more about [babel here](https://learnwithharsh.me/blog/babel-transpiler)
 
 ## Next step
-To learn setup of babel in your repository, [click me](../Babel/README.md)
+To learn setup of babel in your repository, [click me](https://learnwithharsh.me/blog/babel-transpiler)
 
 
 *Hope you enjoyed and gained some knowledge regarding transpiling*
