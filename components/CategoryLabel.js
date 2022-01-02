@@ -8,7 +8,8 @@ function CategoryLabel({children}) {
         PHP: 'pink',
         CSS: 'orange',
         Ruby : 'red',
-        React : 'purple'
+        React : 'burlywood',
+        GraphQL : 'purple'
     }
     return (
         <div  className={styles.categoryDiv}
