@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react'
 import { sortByDateProjects } from '../utils/index.js'
 import style from "@/styles/projects.module.css"
 
-function projects() {
+function Projects() {
     const [projects, setProjects] = useState([])
 
     const api = 'https://api.github.com/users/its-me-Harsh-Anand/repos'

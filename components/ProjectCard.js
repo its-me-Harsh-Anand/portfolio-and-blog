@@ -12,13 +12,13 @@ function projectCard({pname, purl, phomepage, pdescription, pdate}) {
             <p className={style.description}>{pdescription || "Awesome project with no description"}</p>
             <div className={style.links}>
                 <Link href={purl}>
-                    <a href={purl} target="_blank">
+                    <a href={purl} target="_blank" rel="noreferrer">
                         Code <FaExternalLinkAlt />
                     </a>
                 </Link>
                 {
                     phomepage && <Link href={phomepage}>
-                        <a target="_blank" href={phomepage}>
+                        <a target="_blank" href={phomepage} rel="noreferrer">
                             Website <FaExternalLinkAlt />
                         </a>
                         </Link>

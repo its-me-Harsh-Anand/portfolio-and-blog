@@ -3,7 +3,7 @@
     min-height: max-content;
     max-height: min-content;
     flex-direction: column;
-    max-width: 100%;
+    max-width: fit-content;
     min-width: 350px;
     margin: 10px;
     /* border: 1px solid rgb(48, 33, 33); */
@@ -28,7 +28,7 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
     background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .links{

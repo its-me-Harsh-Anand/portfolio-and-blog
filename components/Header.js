@@ -26,6 +26,10 @@ function Header() {
                      <Link href='/blog'>
                          <a className={styles.links}>Blog</a>
                      </Link>
+
+                     <Link href='/projects'>
+                         <a className={styles.links}>Projects</a>
+                     </Link>
                      {/* <Link href='/opportunities'>
                          <a className={styles.links}>Opportunities</a>
                      </Link>
