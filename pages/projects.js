@@ -35,4 +35,4 @@ function Projects() {
     )
 }
 
-export default projects
+export default Projects
