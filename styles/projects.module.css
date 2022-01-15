@@ -1,14 +1,14 @@
 .heading{
-    text-align: "center";
-    margin:"2rem";
+    text-align: center;
+    margin: 2rem;
     background: -webkit-linear-gradient(45deg, #09009f, #00ff95 50%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .projectmain{
-    display:"flex";
-    flex-wrap:"wrap";
-    justify-content: "space-between";
-    align-items: "center";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
