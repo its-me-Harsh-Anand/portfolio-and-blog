@@ -3,7 +3,7 @@
     min-height: max-content;
     max-height: min-content;
     flex-direction: column;
-    max-width: fit-content;
+    max-width: 100%;
     min-width: 350px;
     margin: 10px;
     /* border: 1px solid rgb(48, 33, 33); */
