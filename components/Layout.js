@@ -11,11 +11,10 @@ function Layout({title, keywords, description, children}) {
                 <title>{title}</title>
                 <link rel="icon" href = "/favicon.ico" />
                 <meta name="keywords" content={keywords} />
-                <meta name="description" content={description} />
-                <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2470101792045662"
-     crossorigin="anonymous" />
+                <meta name="description" content={description} />       
             </Head>
-
+            <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2470101792045662"
+     crossorigin="anonymous" />
             <Header />
             
 
