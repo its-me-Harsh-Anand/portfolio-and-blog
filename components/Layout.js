@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '@/styles/layout.module.css'
 import Header from './Header'
 import SearchBar from './SearchBar'
+import Script from 'next/script'
 
 function Layout({title, keywords, description, children}) {
     return (
@@ -11,6 +12,8 @@ function Layout({title, keywords, description, children}) {
                 <link rel="icon" href = "/favicon.ico" />
                 <meta name="keywords" content={keywords} />
                 <meta name="description" content={description} />
+                <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2470101792045662"
+     crossorigin="anonymous" />
             </Head>
 
             <Header />
