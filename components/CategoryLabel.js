@@ -9,7 +9,8 @@ function CategoryLabel({children}) {
         CSS: 'orange',
         Ruby : 'red',
         React : 'burlywood',
-        GraphQL : 'purple'
+        GraphQL : 'purple',
+        Roadmap : 'rgb(155 163 235)'
     }
     return (
         <div  className={styles.categoryDiv}

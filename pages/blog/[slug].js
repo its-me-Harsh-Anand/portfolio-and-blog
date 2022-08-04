@@ -35,11 +35,11 @@ function BlogPage({frontmatter : {
             return post
         })
         .then((post)=>{
-            setLikes(post.likes)
+            setLikes(post?.likes || 0)
             return post
         })
         .then((post)=>{
-            setPostid(post._id)
+            setPostid(post?._id || 0)
         })
     }, [])
 
@@ -53,9 +53,12 @@ function BlogPage({frontmatter : {
             likes : likes+1
         }
 
-
-        axios.post(`https://learnwithharsh.herokuapp.com/posts/update/${postid}`, updatedlike)
-        .then(res=> console.log(res.data))
+        if(postid !== 0){
+            axios.post(`https://learnwithharsh.herokuapp.com/posts/update/${postid}`, updatedlike)
+            .then(res=> console.log(res.data))
+        } else {
+            console.log(`New post with title: ${title}, not updated in backend`)
+        }
     }
 
 
