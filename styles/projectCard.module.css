@@ -55,3 +55,9 @@
     font-size: 0.9rem;
 
 }
+
+@media screen and (max-width: 800px) {
+    .main{
+        width: -webkit-fill-available; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
